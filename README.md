@@ -1,4 +1,4 @@
-## Oxy-node version 0.1.0
+## Oxy-node
 
 ## Installation
 
