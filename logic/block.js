@@ -56,8 +56,7 @@ __private.getAddressByPublicKey = function (publicKey) {
 		temp[i] = publicKeyHash[7 - i];
 	}
 
-	var address = bignum.fromBuffer(temp).toString() + 'R';
-	return address;
+	return bignum.fromBuffer(temp).toString() + 'X';
 };
 
 // Public methods
