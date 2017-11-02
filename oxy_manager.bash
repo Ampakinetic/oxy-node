@@ -2,7 +2,7 @@
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LANGUAGE=en_US.UTF-8
-version="1.0.0"
+version="1.0.1"
 
 cd "$(cd -P -- "$(dirname -- "$0")" && pwd -P)"
 root_path=$(pwd)
@@ -222,7 +222,7 @@ install_oxy() {
 # ---------------------
 function install_wallet {
   cd $HOME
-    
+
     ## Check if directory exists
     if [ -d "$root_path" ]; then
       cd $root_path
@@ -340,6 +340,13 @@ start_log() {
   echo "" >> $logfile
 }
 
+show_version() {
+  PORT=$(sed '2q;d' $OXY_CONFIG | awk -F, '{print $1}' | awk '{print $NF}')
+  RESPONSE=$(curl -s http://localhost:$PORT/api/peers/version)
+  VERSION=$(echo $RESPONSE | sed -e 's/^.*"version"[ ]*:[ ]*"//' -e 's/".*//')
+  echo "Your node version: $VERSION"
+}
+
 case $1 in
     "install")
       parse_option $@
@@ -401,9 +408,16 @@ case $1 in
     "stop")
       stop_oxy
     ;;
+    "version")
+      if running; then
+        show_version
+      else
+        echo "X OXY is NOT running."
+      fi
+    ;;
 
 *)
-    echo 'Available options: install, install_wallet, reload (stop/start), rebuild (official snapshot), clean_start (drop database), start, stop, update_client'
+    echo 'Available options: install, install_wallet, reload (stop/start), rebuild (official snapshot), clean_start (drop database), start, stop, update_client, version'
     echo 'Usage: ./oxy_manager.bash install'
     exit 1
 ;;
