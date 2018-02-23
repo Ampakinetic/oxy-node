@@ -1,17 +1,19 @@
 'use strict';
 
 module.exports = {
-	currentVersion: "0.1.2",
+	currentVersion: "0.1.3",
 	minVersion: [
 		{ height: 1,      ver: "^0.1.0" },
-		{ height: 669400, ver: "^0.1.1"}
+		{ height: 669400, ver: "^0.1.1"},
+        { height: 1284200, ver: "^0.1.2"},
+        { height: 1364200, ver: "^0.1.3"},
 	],
 	activeDelegates: 201,
 	maximumVotes: 51,
 	addressLength: 208,
 	blockHeaderLength: 248,
-  blockSlotWindow: 5, // window of which a slot could be accepted.
-  blockTime: 15000,
+  	blockSlotWindow: 5, // window of which a slot could be accepted.
+  	blockTime: 15000,
 	blockReceiptTimeOut: 30*2, // 2 blocks
 	confirmationLength: 77,
 	epochTime: new Date(Date.UTC(2016, 4, 24, 17, 0, 0, 0)),
@@ -35,7 +37,7 @@ module.exports = {
 	maxAmount: 100000000,
 	maxConfirmations: 77 * 100,
 	maxPayloadLength: 1024 * 1024,
-	maxPeers: 100,
+	maxPeers: 200,
 	maxRequests: 10000 * 12,
 	maxSharedTxs: 100,
 	maxSignaturesLength: 196 * 256,
