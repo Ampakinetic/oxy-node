@@ -37,7 +37,7 @@ z_schema.registerFormat('address', (str: string) => {
     return true;
   }
 
-  return /^[0-9]+[R]$/ig.test(str);
+  return /^[0-9]+[X]$/ig.test(str);
 });
 
 z_schema.registerFormat('username', (str: string) => {

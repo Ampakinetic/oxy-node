@@ -598,6 +598,6 @@ export class AccountLogic implements IAccountLogic {
     for (let i = 0; i < 8; i++) {
       tmp[i] = hash[7 - i];
     }
-    return `${BigNum.fromBuffer(tmp).toString()}R`;
+    return `${BigNum.fromBuffer(tmp).toString()}X`;
   }
 }

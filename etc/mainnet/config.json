@@ -4,7 +4,7 @@
     "version": "1.0.0",
     "minVersion": ">=0.1.2",
     "fileLogLevel": "info",
-    "logFileName": "logs/rise-master.log",
+    "logFileName": "logs/oxy-master.log",
     "consoleLogLevel": "info",
     "trustProxy": false,
     "topAccounts": false,
@@ -12,8 +12,8 @@
     "db": {
         "host": "localhost",
         "port": 5432,
-        "database": "rise_db",
-        "user": "rise",
+        "database": "oxycoin_db_main",
+        "user": "oxycoin",
         "password": "password",
         "poolSize": 95,
         "poolIdleTimeout": 30000,
@@ -49,16 +49,16 @@
         "enabled": true,
         "list": [
             {
-                "ip": "45.32.136.66",
-                "port": 5555
+                "ip": "108.61.117.215",
+                "port": 10000
             },
             {
-                "ip": "45.76.36.14",
-                "port": 5555
+                "ip": "167.99.32.224",
+                "port": 10000
             },
             {
-                "ip": "212.24.96.99",
-                "port": 5555
+                "ip": "94.16.120.217",
+                "port": 10000
             }
         ],
         "access": {
@@ -102,8 +102,8 @@
         "options": {
             "port": 5556,
             "address": "0.0.0.0",
-            "key": "./ssl/rise.key",
-            "cert": "./ssl/rise.crt"
+            "key": "./ssl/oxy.key",
+            "cert": "./ssl/oxy.crt"
         }
     },
     "dapp": {
@@ -111,5 +111,5 @@
         "masterpassword": "r8NJovDde9yB",
         "autoexec": []
     },
-    "nethash": "cd8171332c012514864edd8eb6f68fc3ea6cb2afbaf21c56e12751022684cea5"
+    "nethash": "4c1170a3edb03f961e5e3f7cedcd25563f0a46ec4aa3342715d09c47b398ea19"
 }
