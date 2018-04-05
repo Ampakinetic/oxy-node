@@ -124,7 +124,7 @@ export class BlockLogic implements IBlockLogic {
     for (let i = 0; i < 8; i++) {
       temp[i] = publicKeyHash[7 - i];
     }
-    return `${BigNum.fromBuffer(temp).toString()}R`;
+    return `${BigNum.fromBuffer(temp).toString()}X`;
   }
 
   public table    = 'blocks';
