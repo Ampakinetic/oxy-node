@@ -1,16 +1,11 @@
-## Rise-node version 1.0.0
-
-# RISE
-[![Build Status](https://travis-ci.org/RiseVision/rise-node.svg?branch=development)](https://travis-ci.org/RiseVision/rise-node) [![Coverage Status](https://coveralls.io/repos/github/RiseVision/rise-node/badge.svg?branch=development)](https://coveralls.io/github/RiseVision/rise-node?branch=development) 
+## Oxy-node version 1.0.0
+ 
 ## Installation
 
 An automatic install script for Ubuntu is available.
 
-### Wiki 
 
-For detailed information on node installation and management please refer to the [wiki of this repository](https://github.com/RiseVision/rise-node/wiki).
-
-### Quick start Rise installation (Mainnet)
+### Quick start Oxy installation (Mainnet)
 
 First, perform some basic checks:
 
@@ -27,12 +22,12 @@ cd $HOME
 Download the installer:
 
 ```
-wget https://raw.githubusercontent.com/RiseVision/rise-build/master/scripts/install.sh
+wget https://raw.githubusercontent.com/Oxycoin/oxy-build/master/scripts/install.sh
 ```
 
-Install Rise:
+Install Oxy:
 ```
-bash install.sh install -r mainnet -u https://downloads.rise.vision/core/mainnet/latest.tar.gz
+bash install.sh install -r mainnet -u https://downloads.oxycoin.io/core/mainnet/latest.tar.gz
 ```
 
 The installer will start the node automatically if installation was successful.
@@ -40,14 +35,14 @@ The installer will start the node automatically if installation was successful.
 (Optional) Fast sync from a snapshot
 
 ```
-cd rise
-wget https://downloads.rise.vision/snapshots/mainnet/latest -O latestsnap.gz
+cd Oxy
+wget https://downloads.oxycoin.io/snapshots/mainnet/latest -O latestsnap.gz
 ./manager.sh restoreBackup latestsnap.gz
 ```
 
 ## Basic node management
 
-Installer will create a `rise` folder in your homedir. Make sure to `cd` to this dir when managing your node.
+Installer will create a `oxy` folder in your homedir. Make sure to `cd` to this dir when managing your node.
 
 
 Check the status of your node with:
@@ -70,10 +65,7 @@ And change this section to include your passphrase:
 {
   "fileLogLevel": "error",
   "forging": {
-    "secret": [ "my secret" ],
-    "access": {
-      "whiteList": [ "127.0.0.1" ]
-    }
+    "secret": [ "my secret" ]
   }
 }
 ```
@@ -83,17 +75,17 @@ And finally restart your node to apply the changes:
 ./manager.sh restart node
 ```
 
-### Quick start Rise installation (Testnet) 
+### Quick start Oxy installation (Testnet) 
 The same as above, only the install step is different:
 ```
-bash install.sh install -r testnet -u https://downloads.rise.vision/core/testnet/latest.tar.gz
+bash install.sh install -r testnet -u https://downloads.oxycoin.io/core/testnet/latest.tar.gz
 ```
 
 
 (Optional) Fast sync from a snapshot
 
 ```
-wget https://downloads.rise.vision/snapshots/testnet/latest -O latestsnap.gz
+wget https://downloads.oxycoin.io/snapshots/testnet/latest -O latestsnap.gz
 ./manager.sh restoreBackup latestsnap.gz
 ```
 
@@ -114,7 +106,8 @@ wget https://downloads.rise.vision/snapshots/testnet/latest -O latestsnap.gz
 
 ## License
 
-Copyright © 2017 Rise<br>
+Copyright © 2017 Oxy<br>
+Copyright © 2017 RISE<br>
 Copyright © 2016-2017 Shift<br>  
 Copyright © 2016-2017 Lisk Foundation
 
@@ -122,13 +115,14 @@ This program is free software: you can redistribute it and/or modify it under th
 
 This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 
-You should have received a copy of the [GNU General Public License](https://github.com/RiseVision/rise-node/src/master/LICENSE) along with this program.  If not, see <http://www.gnu.org/licenses/>.
+You should have received a copy of the [GNU General Public License](https://github.com/Oxycoin/oxy-node/src/master/LICENSE) along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ***
 
 This program also incorporates work previously released with lisk `0.7.0` (and earlier) versions under the [MIT License](https://opensource.org/licenses/MIT). To comply with the requirements of that license, the following permission notice, applicable to those parts of the code only, is included below:
 
-Copyright © 2017 Rise<br>
+Copyright © 2017 Oxy<br>
+Copyright © 2017 RISE<br>
 Copyright © 2016-2017 Shift<br>
 Copyright © 2016-2017 Lisk Foundation<br>  
 Copyright © 2015 Crypti
