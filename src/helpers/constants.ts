@@ -53,10 +53,11 @@ export default {
   confirmationLength           : 77,
   epochTime                    : new Date(Date.UTC(2016, 4, 24, 17, 0, 0, 0)),
   minVersion                   : [
-    { height: 1,      ver: "^0.1.0" },
-    { height: 669400, ver: "^0.1.1"},
-    { height: 1284200, ver: "^0.1.2"},
-    { height: 1364200, ver: "^0.1.3"},
+    { height: 1, ver: '^0.1.0' },
+    { height: 669400, ver: '^0.1.1' },
+    { height: 1284200, ver: '^0.1.2' },
+    { height: 1364200, ver: '^0.1.3' },
+    { height: 2000000, ver: '>=1.0.2' },
   ],
   fees                         : [
     {
@@ -67,7 +68,7 @@ export default {
         secondsignature: 10000000,
         delegate       : 500000000,
         multisignature : 100000000,
-        dapp           : 2500000000
+        dapp           : 2500000000,
       },
     },
   ],
@@ -98,7 +99,7 @@ export default {
     { height: 11, reward: 30000000 },
     { height: 12, reward: 20000000 },
     { height: 13, reward: 500000000 },
-    { height: 2103840, reward: 250000000 },
+    { height: 2103840, reward: 400000000 },
     { height: 2103840 * 2, reward: 150000000 },
     { height: 2103840 * 3, reward: 100000000 },
   ],

@@ -1,8 +1,7 @@
 {
-    "port": 5555,
+    "port": 10000,
     "address": "0.0.0.0",
     "version": "1.0.2",
-    "minVersion": ">=0.1.2",
     "fileLogLevel": "info",
     "logFileName": "logs/oxy-master.log",
     "consoleLogLevel": "info",
