@@ -53,10 +53,10 @@ export default {
   confirmationLength           : 77,
   epochTime                    : new Date(Date.UTC(2016, 4, 24, 17, 0, 0, 0)),
   minVersion                   : [
-    { height: 1, ver: '^0.1.0' },
-    { height: 669400, ver: '^0.1.1' },
-    { height: 1284200, ver: '^0.1.2' },
-    { height: 1364200, ver: '^0.1.3' },
+    { height: 1, ver: '>=0.1.0' },
+    { height: 669400, ver: '>=0.1.1' },
+    { height: 1284200, ver: '>=0.1.2' },
+    { height: 1364200, ver: '>=0.1.3' },
     { height: 2000000, ver: '>=1.0.2' },
   ],
   fees                         : [
