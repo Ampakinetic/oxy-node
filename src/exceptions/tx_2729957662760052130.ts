@@ -3,16 +3,16 @@ import { ITransactionLogic } from '../ioc/interfaces/logic';
 import { IBaseTransaction } from '../logic/transactions';
 import { VoteAsset } from '../logic/transactions';
 /**
- * This transaction was broadcasted with 6837619361654997458 in the same
+ * This transaction was broadcasted with 2729957662760052130 in the same
  * block and it was not allowed to be included as it register the same delegate.
  *
- * Affected block was: 537889
+ * Affected block was: 549745
  */
-export default function exceptionTx6837619361654997458(excManager: ExceptionsManager) {
+export default function exceptionTx2729957662760052130(excManager: ExceptionsManager) {
   const handler: IExceptionHandler<ITransactionLogic> = {
     canHandle(obj: ITransactionLogic, tx: IBaseTransaction<VoteAsset>) {
-      return tx.id === '6837619361654997458' &&
-        tx.senderPublicKey === '71904305bcca3f5e7b57f7845f16a0e7514d0ed870dae8d99e25846499fb5ba2';
+      return tx.id === '2729957662760052130' &&
+        tx.senderPublicKey === 'cbced906dcd30ac4641d72140688b8122eee4b12dc4296e5e750d38c95b0e7d6';
     },
     handle() {
       return Promise.resolve([]);
@@ -20,12 +20,12 @@ export default function exceptionTx6837619361654997458(excManager: ExceptionsMan
   };
   excManager.registerExceptionHandler(
     ExceptionsList.tx_apply,
-    'tx_6837619361654997458',
+    'tx_2729957662760052130',
     handler
   );
   excManager.registerExceptionHandler(
     ExceptionsList.tx_applyUnconfirmed,
-    'tx_6837619361654997458',
+    'tx_2729957662760052130',
     handler
   );
 }
